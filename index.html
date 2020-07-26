@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootsdivapcdn.com/bootsdivap/4.5.0/css/bootsdivap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>My First Calculator</title>
+</head>
+
+<body>
+    <div class="calculator">
+
+        <input type="text" id="display" class="calculator-screen" placeholder="0"/>
+        
+        <div class="calculator-keys">
+          
+          <button type="button" class="operator" value="+" onclick="insert('+')">+</button>
+          <button type="button" class="operator" value="-" onclick="insert('-')">-</button>
+          <button type="button" class="operator" value="*" onclick="insert('*')">&times;</button>
+          <button type="button" class="operator" value="/" onclick="insert('/')">&divide;</button>
+      
+          <button type="button" value="7" onclick="insert(7)">7</button>
+          <button type="button" value="8" onclick="insert(8)">8</button>
+          <button type="button" value="9" onclick="insert(9)">9</button>
+      
+      
+          <button type="button" value="4" onclick="insert(4)">4</button>
+          <button type="button" value="5" onclick="insert(5)">5</button>
+          <button type="button" value="6" onclick="insert(6)">6</button>
+      
+      
+          <button type="button" value="1" onclick="insert(1)">1</button>
+          <button type="button" value="2" onclick="insert(2)">2</button>
+          <button type="button" value="3" onclick="insert(3)">3</button>
+      
+      
+          <button type="button" value="0" onclick="insert(0)">0</button>
+          <button type="button" class="decimal" value="." onclick="insert('.')">.</button>
+          <button type="button" class="all-clear" value="all-clear" onclick="clear()">AC</button>
+      
+          <button type="button" class="equal-sign" value="=" onclick="equal()">=</button>
+      
+        </div>
+      </div>
+    <script>
+        function insert(num) {
+            document.getElementById('display').value = num;
+        }
+
+        function equal() {
+            let exp = document.form.textview.value;
+            if (exp) {
+               document.form.textview.value = eval(exp)
+            }
+        }
+        function clear(){
+            const clearAll = document.getElementById('display').value;
+            clearAll.addEventListener('click', function(){
+                document.getElementById('display').value = 0;
+            })
+        }
+
+    </script>
+</body>
+
+</html>
