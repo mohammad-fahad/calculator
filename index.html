@@ -38,7 +38,7 @@
       
           <button type="button" value="0" onclick="insert(0)">0</button>
           <button type="button" class="decimal" value="." onclick="insert('.')">.</button>
-          <button type="button" id="clear" class="all-clear" value="0" onclick="clear()">AC</button>
+          <button type="button" class="all-clear" value="ac" onclick="clean()">AC</button>
       
           <button type="button" class="equal-sign" value="=" onclick="equal()">=</button>
       
@@ -56,9 +56,9 @@
         }
 
         // Clear
-        function clear(){
-            document.getElementById('display').value = '';   
-       
+        function clean(){
+            const clean =  "";
+            document.getElementById('display').value = clean;  
         }
 
     </script>
