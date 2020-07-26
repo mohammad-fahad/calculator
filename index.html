@@ -38,27 +38,31 @@
       
           <button type="button" value="0" onclick="insert(0)">0</button>
           <button type="button" class="decimal" value="." onclick="insert('.')">.</button>
-          <button type="button" class="all-clear" value="all-clear" onclick="clear()">AC</button>
+          <button type="button" class="all-clear" value="0" onclick="clear()">AC</button>
       
           <button type="button" class="equal-sign" value="=" onclick="equal()">=</button>
       
         </div>
       </div>
     <script>
+        // Inserting numbers 
         function insert(num) {
-            document.getElementById('display').value = num;
+            document.getElementById('display').value = document.getElementById('display').value + num;
         }
-
+        // Equals to
         function equal() {
-            let exp = document.form.textview.value;
+            let exp = document.calculator.calculator-screen.value;
             if (exp) {
-               document.form.textview.value = eval(exp)
+               exp = eval(exp);
             }
         }
+
+        // Clear
         function clear(){
             const clearAll = document.getElementById('display').value;
             clearAll.addEventListener('click', function(){
-                document.getElementById('display').value = 0;
+                const ac = "";
+                document.getElementById('display').value = ac;
             })
         }
 
